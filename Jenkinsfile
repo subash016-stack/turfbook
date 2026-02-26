@@ -16,3 +16,4 @@ pipeline {
         //stage('Push Docker Image') {  steps {sh 'docker push $DOCKER_IMAGE'}}
     }
 }
+// CI improvement by Member 3
