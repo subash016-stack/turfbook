@@ -9,9 +9,6 @@ app = Flask(__name__)
 def db():
     return sqlite3.connect("turf.db")
 
-# -------------------------
-# Create Table
-# -------------------------
 def init_db():
     conn = db()
     conn.execute("""
@@ -26,9 +23,6 @@ def init_db():
 
 init_db()
 
-# -------------------------
-# Home Route
-# -------------------------
 @app.route("/", methods=["GET", "POST"])
 def home():
     conn = db()
