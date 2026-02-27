@@ -3,9 +3,6 @@ import sqlite3
 
 app = Flask(__name__)
 
-# -------------------------
-# Database Connection
-# -------------------------
 def db():
     return sqlite3.connect("turf.db")
 
@@ -44,9 +41,6 @@ def home():
 
     return render_template("index.html", bookings=data)
 
-# -------------------------
-# Delete Booking
-# -------------------------
 @app.route("/delete/<int:id>")
 def delete(id):
     conn = db()
