@@ -133,3 +133,66 @@ Branch:
 
 */main
 Save
+#Jenkins Auto Trigger Setup Using ngrok
+
+Since Jenkins runs locally (`http://localhost:8080`), GitHub cannot access it directly.  
+We use **ngrok** to expose Jenkins to the internet so GitHub webhooks can trigger builds automatically.
+
+# Install ngrok
+
+Configure ngrok (One-Time Setup)
+
+Copy your auth token and run:
+
+ngrok config add-authtoken YOUR_AUTH_TOKEN
+
+# Start Jenkins
+
+Make sure Jenkins is running:
+
+http://localhost:8080
+
+#Expose Jenkins Using ngrok
+
+Run:
+ngrok http 8080
+
+You will see:
+
+Forwarding https://random-name.ngrok-free.dev -> http://localhost:8080
+
+Copy the HTTPS URL.
+
+ Keep this terminal open.
+
+# Configure GitHub Webhook
+Go to:
+Repository → Settings → Webhooks → Add webhook
+Set:
+Payload URL
+https://your-ngrok-url/github-webhook/
+(Must include /github-webhook/)
+Content Type:
+application/json
+Events:
+Just the push event
+
+Save the webhook.
+
+#Enable Trigger in Jenkins
+
+In Jenkins:
+
+Job → Configure → Build Triggers
+
+Enable:
+
+GitHub hook trigger for GITScm polling
+
+Save.
+
+##Expected Result
+
+GitHub Webhook shows Status: 200 OK
+
+Jenkins build triggers automatically
