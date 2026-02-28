@@ -13,6 +13,28 @@ This project demonstrates:
 - Docker Hub registry integration
 - End-to-end CI workflow
 
+---
+
+# 🏗 Tech Stack
+
+- Python (Flask)
+- Docker
+- Jenkins
+- GitHub
+- Docker Hub
+
+---
+
+# 📂 Project Structure
+.
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── Jenkinsfile
+├── templates/
+├── static/
+└── README.md
+
 
 🐳 DOCKER SETUP
 
@@ -165,3 +187,8 @@ GitHub hook trigger for GITScm polling
 
 Save.
 
+##Expected Result
+
+GitHub Webhook shows Status: 200 OK
+
+Jenkins build triggers automatically
