@@ -1,9 +1,6 @@
-# turfbook
-# 🏟 Turf Booking Application
+# turfbook - Turf Booking Application
 
 A Flask-based Turf Booking web application containerized using Docker and integrated with a Jenkins CI pipeline for automated Docker image builds and deployment to Docker Hub.
-
----
 
 # 📌 Project Overview
 
@@ -16,33 +13,10 @@ This project demonstrates:
 - Docker Hub registry integration
 - End-to-end CI workflow
 
----
 
-# 🏗 Tech Stack
+🐳 DOCKER SETUP
 
-- Python (Flask)
-- Docker
-- Jenkins
-- GitHub
-- Docker Hub
-
----
-
-# 📂 Project Structure
-.
-├── app.py
-├── requirements.txt
-├── Dockerfile
-├── Jenkinsfile
-├── templates/
-├── static/
-└── README.md
-
----
-
-# 🐳 DOCKER SETUP
-
-## 1️⃣ Install Docker
+1️⃣ Install Docker
 
 Download and install Docker Desktop:
 
@@ -191,8 +165,3 @@ GitHub hook trigger for GITScm polling
 
 Save.
 
-##Expected Result
-
-GitHub Webhook shows Status: 200 OK
-
-Jenkins build triggers automatically
