@@ -1,85 +1,125 @@
-/* Page Styling */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("https://img.freepik.com/premium-photo/installation-white-lines-artificial-turf-sports-field_124507-270348.jpg?semt=ais_user_personalization&w=740&q=80") no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
     text-align: center;
+    color: #ffffff;
 }
 
-/* Heading */
+
 h1 {
-    background: #1e3c72;
-    color: white;
-    padding: 15px;
-    margin: 0;
-}
-
-/* Form Container */
-.form-container {
-    background: white;
-    width: 40%;
-    margin: 30px auto;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: #00ffae;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 28px;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Inputs */
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    width: 40%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: scale(1.02);
+}
+
+
 input,
 select {
-    width: 80%;
-    padding: 10px;
-    margin: 8px;
-    border-radius: 5px;
-    border: 1px solid gray;
+    width: 85%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s ease;
 }
 
-/* Button */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #00c853;
+    box-shadow: 0px 0px 8px rgba(0, 200, 83, 0.6);
+}
+
+
 button {
-    padding: 10px 20px;
-    background: green;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #00c853, #009624);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background: darkgreen;
+    background: linear-gradient(90deg, #009624, #006400);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Table Container */
+
 .table-container {
-    width: 80%;
-    margin: auto;
+    width: 85%;
+    margin: 40px auto;
 }
 
-/* Table Styling */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    box-shadow: 0px 0px 8px gray;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th {
-    background: #1e3c72;
-    color: white;
+    background: linear-gradient(90deg, #0f2027, #203a43);
+    color: #00ffae;
+    padding: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 th, td {
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
 }
 
-/* Delete Button */
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+
 .delete-btn {
-    color: red;
+    color: #ff1744;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .delete-btn:hover {
-    color: darkred;
+    color: #d50000;
+    text-decoration: underline;
 }
